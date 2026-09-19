@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Geoffrey Vancoetsem — ingénieur logiciel</title>
+  <meta name="description" content="Ingénieur logiciel, vingt ans de .NET dont sept en banque d'investissement à Montréal. Je cherche un poste dans l'aéronautique, le spatial ou la défense. Mobilité Bordeaux et Toulouse.">
+  <meta name="author" content="Geoffrey Vancoetsem">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://geeooff.github.io/fr/">
+  <link rel="alternate" hreflang="en" href="https://geeooff.github.io/">
+  <link rel="alternate" hreflang="fr" href="https://geeooff.github.io/fr/">
+  <link rel="alternate" hreflang="x-default" href="https://geeooff.github.io/">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Geoffrey Vancoetsem — ingénieur logiciel">
+  <meta property="og:description" content="Vingt ans de .NET, dont sept en banque d'investissement à Montréal. Je cherche un poste dans l'aéronautique, le spatial ou la défense.">
+  <meta property="og:url" content="https://geeooff.github.io/fr/">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="en_GB">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="hero">
+  <nav class="lang" aria-label="Langue">
+    <a href="../" lang="en" hreflang="en">English</a>
+  </nav>
+  <p class="eyebrow">Lyon · mobilité Bordeaux et Toulouse</p>
+  <h1>Geoffrey Vancoetsem</h1>
+  <p class="tagline">
+    Ingénieur logiciel. Vingt ans de .NET, dont sept en banque
+    d'investissement à Montréal. Je cherche un poste dans l'aéronautique,
+    le spatial ou la défense.
+  </p>
+  <nav class="links" aria-label="Profils">
+    <a class="button primary" href="https://www.linkedin.com/in/geoffreyvancoetsem/" rel="me">LinkedIn</a>
+    <a class="button" href="https://github.com/geeooff" rel="me">GitHub</a>
+  </nav>
+</header>
+
+<main>
+
+<section id="recherche">
+  <h2>Ce que je cherche</h2>
+  <p>
+    Un poste d'ingénieur ou de référent technique dans l'aéronautique civile
+    ou militaire, le spatial ou la défense. Deux familles de postes
+    m'intéressent, et elles n'ont pas le même coût d'entrée.
+  </p>
+  <ul class="plain">
+    <li>
+      <strong>Celles où mon expérience s'applique telle quelle.</strong>
+      Segment sol, bancs d'essais et moyens de simulation, systèmes
+      d'information industriels, MCO, outillage et chaîne de production
+      logicielle. Là, j'arrive avec vingt ans de métier.
+    </li>
+    <li>
+      <strong>Le logiciel embarqué critique.</strong>
+      Là, je n'ai pas d'expérience professionnelle. Je m'y prépare depuis
+      août 2026 — c'est la section suivante — et je sais que j'y repartirais
+      de plus bas.
+    </li>
+  </ul>
+  <p>
+    Les contraintes du secteur — temps réel, sûreté de fonctionnement,
+    confidentialité, conformité — ne me sont pas étrangères : sept ans en
+    environnement bancaire réglementé et audité, dix-sept ans avant cela sur
+    des plateformes où l'indisponibilité n'était pas une option.
+  </p>
+  <p>
+    L'aviation, c'est depuis l'enfance ; le milieu militaire m'est un peu
+    familier.
+  </p>
+  <p>
+    Nationalité française, éligible à une habilitation Défense. Français
+    natif, anglais professionnel — sept ans en équipes anglophones.
+  </p>
+</section>
+
+<section id="embarque">
+  <h2>Ce que j'ai fait pour me préparer à l'embarqué</h2>
+  <p>
+    L'embarqué critique est une autre discipline que la mienne : pas de
+    ramasse-miettes, pas d'exceptions, pas d'allocation dynamique, et un
+    processus de certification qui décide de ce qui est acceptable. J'ai
+    commencé seul, en août 2026, pour ne pas postuler sur ces postes sans
+    savoir de quoi il retourne. Deux dépôts Git, un par langage.
+  </p>
+
+  <div class="grid">
+    <article class="card">
+      <h3>C++17 et DO-178C</h3>
+      <p>
+        Un parcours en modules qui associe chaque notion du langage à
+        l'objectif de certification qui la contraint. Côté processus :
+        exigences de haut et de bas niveau, traçabilité reconstruite par un
+        script, tests basés sur les exigences, couverture MC/DC, standard de
+        codage, gestion de configuration.
+      </p>
+      <p>
+        Il se termine sur un cas d'étude : un système de jaugeage carburant
+        (FQMS), DAL B, avec ses documents d'exigences et sa matrice de
+        traçabilité. Compile sans avertissement sous MSVC, GCC et Clang ;
+        intégration continue sous Linux.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>Ada 2022 / SPARK et DO-178C</h3>
+      <p>
+        Le même FQMS, contre les mêmes exigences, réécrit en Ada. Le but :
+        mesurer ce que la chaîne Ada apporte que le C++ n'a pas — contrats,
+        analyse de flot, preuve formelle d'absence d'erreur à l'exécution
+        (DO-333), couverture MC/DC outillée, restrictions vérifiées par le
+        compilateur.
+      </p>
+      <p>
+        La chaîne d'outils est figée dans un conteneur, qui tient lieu
+        d'environnement de développement contrôlé.
+      </p>
+    </article>
+  </div>
+
+  <p>
+    Ce sont des supports d'exercice, pas des projets certifiés, et je ne
+    prétends pas au niveau de quelqu'un qui fait ça depuis quinze ans. Ils
+    montrent ce que j'ai compris de la norme et comment je travaille. Ils
+    sont privés pour l'instant ; je les ouvre sur demande.
+  </p>
+  <p>
+    Ada/SPARK, C, C++, Rust : j'ai mis les mains dans les quatre, à des
+    degrés divers. J'apprendrai celui du projet.
+  </p>
+  <p>
+    Je cherche aussi une formation, ou une VAE, pour donner un cadre reconnu
+    à cette transition. C'est un projet, pas encore engagé.
+  </p>
+</section>
+
+<section id="projets">
+  <h2>Projets publics</h2>
+
+  <article class="project">
+    <h3>
+      <a href="https://github.com/geeooff/GameModeExecutor">GameModeExecutor</a>
+      <span class="meta">Rust · 2026</span>
+    </h3>
+    <p>
+      Programme Windows qui lance les commandes de votre choix quand un jeu
+      démarre et quand il s'arrête. Pas de liste de jeux à maintenir : il
+      s'appuie sur un mécanisme de Windows, et ne scrute rien pendant le jeu.
+      Sans droits administrateur, sans accès réseau non demandé.
+    </p>
+    <p>
+      Deux exécutables autonomes, installeur MSI, mise à jour à la demande,
+      plus de 170 tests, intégration continue, et un journal de conception
+      qui consigne chaque décision avec la mesure qui l'a motivée. Premier
+      projet en Rust ; en usage quotidien sur ma machine.
+    </p>
+  </article>
+
+  <article class="project">
+    <h3>
+      <a href="https://github.com/geeooff/forza-data-web">forza-data-web</a>
+      <span class="meta">C# · depuis 2018</span>
+    </h3>
+    <p>
+      Récepteur de télémétrie pour Forza Motorsport et Forza Horizon :
+      décodage à 60 Hz d'un protocole binaire UDP, quatre variantes de trame
+      selon le jeu, enregistrement et relecture. Une cinquantaine d'étoiles ;
+      les champs non documentés viennent d'observations de la communauté.
+    </p>
+  </article>
+
+  <article class="project">
+    <h3>
+      <a href="https://github.com/geeooff/iis-log-rotator">iis-log-rotator</a>
+      <span class="meta">C# · 2012 – 2023, archivé</span>
+    </h3>
+    <p>
+      Rotation, compression et purge des journaux IIS : autodétection des
+      services installés (WMI, métabase IIS), rapport dans le journal
+      d'événements Windows, mode simulation. Né d'un besoin en production,
+      où il a tourné des années ; maintenu jusqu'en 2023, repris par
+      d'autres.
+    </p>
+  </article>
+
+  <p class="note">
+    En marge : <a href="https://github.com/geeooff/github-release-downloader">github-release-downloader</a>
+    (C#), et des bacs à sable Go, Rust, Angular, Blazor et Vite.
+  </p>
+  <p class="note">
+    J'ai développé vingt ans sans IA générative. Sur les dépôts récents,
+    j'utilise un assistant IA en pair-programming — il apparaît comme
+    co-auteur dans l'historique des commits — avec prudence : rien n'est
+    affirmé sans avoir été exécuté, et je reste responsable de tout ce qui
+    est produit.
+  </p>
+</section>
+
+<section id="competences">
+  <h2>Compétences</h2>
+  <p class="stack">
+    .NET / C# · ASP.NET Core · Angular / TypeScript · SQL Server · Azure ·
+    Kubernetes · Docker · GitHub Actions · Jenkins · SonarQube · IBM MQ ·
+    TDD · CI/CD
+  </p>
+  <p class="note">
+    En cours : C++17, Ada 2022 / SPARK, Rust. Le détail des postes est sur
+    <a href="https://www.linkedin.com/in/geoffreyvancoetsem/">LinkedIn</a>.
+  </p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>
+    <a href="https://www.linkedin.com/in/geoffreyvancoetsem/">LinkedIn</a>
+    — profil en français et en anglais. Le code est sur
+    <a href="https://github.com/geeooff">GitHub</a>.
+  </p>
+</section>
+
+</main>
+
+<footer>
+  <p>
+    Page statique, sans framework, sans JavaScript, sans traceur.
+    <a href="https://github.com/geeooff/geeooff.github.io">Source</a>.
+    <a href="../" lang="en" hreflang="en">English version</a>.
+  </p>
+</footer>
+
+</body>
+</html>

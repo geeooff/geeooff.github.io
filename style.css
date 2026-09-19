@@ -1,0 +1,194 @@
+/* Geoffrey Vancoetsem — geeooff.github.io
+   Une feuille, pas de framework. Les couleurs sont des variables ;
+   le mode sombre suit la préférence du système. */
+
+:root {
+  --bg: #fbfbf9;
+  --fg: #1c1f24;
+  --muted: #5d636d;
+  --accent: #1f5f8b;
+  --accent-fg: #ffffff;
+  --line: #d9dbd6;
+  --card: #ffffff;
+  --code: #eef0ec;
+  --measure: 42rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14171b;
+    --fg: #e6e8ea;
+    --muted: #9aa1aa;
+    --accent: #8ec1e6;
+    --accent-fg: #0f1418;
+    --line: #2c3139;
+    --card: #1b1f25;
+    --code: #232830;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  padding: 0 1rem;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+a:hover { text-decoration-thickness: 2px; }
+
+h1, h2, h3 { line-height: 1.2; letter-spacing: -0.01em; }
+h1 { font-size: clamp(2rem, 6vw, 2.75rem); margin: 0.25rem 0 0.75rem; }
+h2 {
+  font-size: 1.375rem;
+  margin: 0 0 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--line);
+}
+h3 { font-size: 1.125rem; margin: 0 0 0.5rem; }
+
+p { margin: 0 0 1rem; }
+p:last-child { margin-bottom: 0; }
+
+strong { font-weight: 600; }
+
+/* En-tête */
+.hero {
+  position: relative;
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 4rem 0 2.5rem;
+}
+.lang {
+  position: absolute;
+  top: 1.25rem;
+  right: 0;
+  font-size: 0.9rem;
+}
+.lang a { color: var(--muted); }
+.lang a:hover { color: var(--accent); }
+.eyebrow {
+  margin: 0;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.tagline {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin: 0 0 1.5rem;
+  max-width: 36rem;
+}
+.links { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 1.1rem;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+.button:hover { background: var(--code); }
+.button.primary { background: var(--accent); color: var(--accent-fg); }
+.button.primary:hover { filter: brightness(1.1); background: var(--accent); }
+
+/* Corps */
+main {
+  max-width: var(--measure);
+  margin: 0 auto;
+}
+section { margin: 0 0 3rem; }
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  margin: 1.25rem 0;
+}
+@media (min-width: 40rem) {
+  .grid { grid-template-columns: 1fr 1fr; }
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1.1rem 1.2rem;
+  font-size: 0.97rem;
+}
+.card h3 { color: var(--accent); }
+
+.note {
+  color: var(--muted);
+  font-size: 0.97rem;
+}
+
+ul.plain {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ul.plain li {
+  padding: 0.6rem 0 0.6rem 1.1rem;
+  border-left: 3px solid var(--line);
+  margin-bottom: 0.6rem;
+}
+
+.project {
+  padding: 1rem 0;
+  border-top: 1px solid var(--line);
+}
+.project:first-of-type { border-top: 0; padding-top: 0; }
+.project h3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.75rem;
+}
+.meta {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--muted);
+  font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", Menlo, Consolas, monospace;
+}
+
+.stack {
+  font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", Menlo, Consolas, monospace;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  background: var(--code);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+}
+
+/* Pied de page */
+footer {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 1.5rem 0 3rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media print {
+  body { background: #fff; color: #000; }
+  .lang { display: none; }
+  .button { border-color: #000; color: #000; }
+  .button.primary { background: none; }
+  .button::after { content: " " attr(href); font-size: 0.85em; }
+}
